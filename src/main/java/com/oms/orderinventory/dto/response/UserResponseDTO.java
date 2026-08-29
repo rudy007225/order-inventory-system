@@ -4,7 +4,6 @@ import java.time.LocalDateTime;
 
 import com.oms.orderinventory.entity.Role;
 
-import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
