@@ -25,3 +25,26 @@ public class GlobalExceptionHandler {
 				.body(ApiResponse.error("Something went wrong. Please try again later!!!"));
 	}
 }
+
+
+/*
+* AppException.java — abstract-style base exception (extends RuntimeException), 
+                    * carries message + HttpStatus, 
+                    * protected constructor(only subclasses can call it).
+* 
+* ResourceAlreadyExistsException.java — extends AppException, 
+                                       * public constructor 
+                                       * taking only message, 
+                                       * hardcodes HttpStatus.CONFLICT internally.
+* 
+* GlobalExceptionHandler.java — @RestControllerAdvice class with two 
+							  * @ExceptionHandler methods: one for AppException(dynamic status from ex.getStatus()), 
+							  * one generic Exception fallback (always 500, safe generic message, 
+							  * real error only logged server-side via ex.printStackTrace()).
+* 
+*/
+
+
+
+
+
